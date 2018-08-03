@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
-pipenv shell
-pipenv install
-export FLASK_APP=app/app.py
+export FLASK_APP="csv2xlsx"
 flask run

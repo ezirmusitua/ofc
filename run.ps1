@@ -1,4 +1,4 @@
 pipenv shell
 pipenv install
-set $env:FLASK_APP=app/app.py
+$env:FLASK_APP="csv2xlsx"
 flask run
