@@ -1,0 +1,16 @@
+.content-container {
+  padding-top: 64px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: scroll;
+
+}
+
+.content-container::-webkit-scrollbar {
+  /* addresses the background of the bar itself */
+  width: 8px;
+}
+
+.content-container__inner {
+
+}

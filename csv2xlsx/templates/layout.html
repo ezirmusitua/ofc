@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <title>CSV to Excel file converter</title>
+  <meta name="encoding" content="utf-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
+<div class="content-container">
+  <!-- TODO: add nav bar -->
+  <nav>Demo/Demo</nav>
+  <header>
+    {% block header %}
+    <!-- Header content -->
+    {% endblock %}
+  </header>
+  <div class="content-container__inner">
+    {% block content %}
+    <!-- Header content -->
+    {% endblock %}
+  </div>
+</div>
+<div class="flash-container">
+  {% for message in get_flashed_messages() %}
+  <div class="flash">{{ message }}</div>
+  {% endfor %}
+</div>
 </body>
 </html>
