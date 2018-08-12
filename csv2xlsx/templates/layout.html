@@ -3,18 +3,13 @@
 <head>
   <title>CSV to Excel file converter</title>
   <meta name="encoding" content="utf-8">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}">
+  {% block styles %}{% endblock %}
 </head>
 <body>
 <div class="content-container">
-  <!-- TODO: add nav bar -->
-  <nav>Demo/Demo</nav>
-  <header>
-    {% block header %}
-    <!-- Header content -->
-    {% endblock %}
-  </header>
   <div class="content-container__inner">
+    </header>
     {% block content %}
     <!-- Header content -->
     {% endblock %}

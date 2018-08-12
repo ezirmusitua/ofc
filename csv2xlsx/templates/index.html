@@ -1,8 +1,88 @@
 {% extends 'layout.html' %}
 
-{% block header %}
-<h1>Hello World</h1>
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 {% endblock %}
+
+
 {% block content %}
-<p>Hello World</p>
+<div class="about-container">
+  <h2 class="title">CSV to Excel Converter</h2>
+  <div class="desc-container">
+    <p>CSV to Excel Converter is a simple web app for converting csv file(s) to a excel file(with xlsx format).</p>
+    <div class="divider"></div>
+    <div class="desc-steps-container">
+      <p>Use it with following steps: </p>
+      <ol class="desc-steps">
+        <li>Click <b>upload</b> button in in csv file upload area, then select csv file from file selector pop up.</li>
+        <li>Fill the sheet name field in csv file upload area, this name will be the excel sheet name.</li>
+        <li>If you want to merge multi csv file to a single excel file, click <b>Upload More</b> button below the upload
+          area
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+</div>
+<div class="main-container">
+  <div class="csv-upload-area">
+    <div class="file-stats">
+      <h3>Demo.csv</h3>
+      <div class="stats-detail">
+        <span>12800 KB</span>
+        <span>Last Update at: Today</span>
+      </div>
+    </div>
+    <form>
+      <input type="text" placeholder="sheet name"/>
+      <input type="file">
+    </form>
+  </div>
+  <div class="csv-upload-area">
+    <div class="file-stats">
+      <h3>Demo.csv</h3>
+      <div class="stats-detail">
+        <span>12800 KB</span>
+        <span>Last Update at: Today</span>
+      </div>
+    </div>
+    <form>
+      <input type="text" placeholder="sheet name"/>
+      <input type="file">
+    </form>
+  </div>
+  <div class="csv-upload-area">
+    <div class="file-stats">
+      <h3>Demo.csv</h3>
+      <div class="stats-detail">
+        <span>12800 KB</span>
+        <span>Last Update at: Today</span>
+      </div>
+    </div>
+    <form>
+      <input type="text" placeholder="sheet name"/>
+      <input type="file">
+    </form>
+  </div>
+  <div class="csv-upload-area">
+    <div class="file-stats">
+      <h3>Demo.csv</h3>
+      <div class="stats-detail">
+        <span>12800 KB</span>
+        <span>Last Update at: Today</span>
+      </div>
+    </div>
+    <form>
+      <input type="text" placeholder="sheet name"/>
+      <input type="file">
+    </form>
+  </div>
+
+  <button class="upload-more-btn">Upload More</button>
+</div>
+<div class="submit-action">
+  <button class="convert-and-download-btn">Convert And Download</button>
+</div>
 {% endblock %}
