@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, request
 
 
 def hello():
@@ -7,3 +7,9 @@ def hello():
 
 def index():
     return render_template('index.html')
+
+
+def handle_and_download():
+    print(request.form)
+    print(request.files)
+    return 'Handled'

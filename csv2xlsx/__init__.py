@@ -22,5 +22,6 @@ def create_app(test_config=None):
         pass
 
     app.add_url_rule('/', 'index', views.index)
+    app.add_url_rule('/', 'download', views.handle_and_download, methods=('POST',))
     app.add_url_rule('/ping', 'ping', views.hello)
     return app
