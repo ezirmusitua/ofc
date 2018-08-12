@@ -2,7 +2,11 @@
 
 
 {% block styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/file-upload.js') }}" type="text/javascript"></script>
 {% endblock %}
 
 
@@ -23,64 +27,10 @@
       </ol>
     </div>
   </div>
-
   <div class="divider"></div>
 </div>
-<div class="main-container">
-  <div class="csv-upload-area">
-    <div class="file-stats">
-      <h3>Demo.csv</h3>
-      <div class="stats-detail">
-        <span>12800 KB</span>
-        <span>Last Update at: Today</span>
-      </div>
-    </div>
-    <form>
-      <input type="text" placeholder="sheet name"/>
-      <input type="file">
-    </form>
-  </div>
-  <div class="csv-upload-area">
-    <div class="file-stats">
-      <h3>Demo.csv</h3>
-      <div class="stats-detail">
-        <span>12800 KB</span>
-        <span>Last Update at: Today</span>
-      </div>
-    </div>
-    <form>
-      <input type="text" placeholder="sheet name"/>
-      <input type="file">
-    </form>
-  </div>
-  <div class="csv-upload-area">
-    <div class="file-stats">
-      <h3>Demo.csv</h3>
-      <div class="stats-detail">
-        <span>12800 KB</span>
-        <span>Last Update at: Today</span>
-      </div>
-    </div>
-    <form>
-      <input type="text" placeholder="sheet name"/>
-      <input type="file">
-    </form>
-  </div>
-  <div class="csv-upload-area">
-    <div class="file-stats">
-      <h3>Demo.csv</h3>
-      <div class="stats-detail">
-        <span>12800 KB</span>
-        <span>Last Update at: Today</span>
-      </div>
-    </div>
-    <form>
-      <input type="text" placeholder="sheet name"/>
-      <input type="file">
-    </form>
-  </div>
-
-  <button class="upload-more-btn">Upload More</button>
+<div id="container" class="main-container">
+  <button id="add-uploader" class="upload-more-btn">Upload More</button>
 </div>
 <div class="submit-action">
   <button class="convert-and-download-btn">Convert And Download</button>
