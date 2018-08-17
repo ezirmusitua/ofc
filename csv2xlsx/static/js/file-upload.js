@@ -1,4 +1,11 @@
 (function () {
+  function humanReadableSize(size) {
+    // less than 1KB
+    if (size < 1024) return '1KB';
+    else if (size > 1024 * 1024) return Math.ceil(size / 1024 / 1024) + 'G';
+    else return (size / 1024).toFixed(2) + 'MB';
+  }
+
   class Uploader {
     static init() {
       Uploader.container = document.getElementById('container');
@@ -38,8 +45,9 @@
       this.fileStatsElem = document.createElement('div');
       this.fileStatsElem.setAttribute('class', 'file-stats');
       this.fileNameElem = document.createElement('h3');
-      this.fileNameElem.innerText = 'No Selected';
-      this.fileStatsDetailElem = document.createElement('stats-detail');
+      this.fileNameElem.innerText = 'Not Selected';
+      this.fileStatsDetailElem = document.createElement('div');
+      this.fileStatsDetailElem.setAttribute('class', 'stats-detail');
       this.fileSizeElem = document.createElement('p');
       this.fileSizeElem.innerText = 'Size: Unknown';
       this.fileUpdateAtElem = document.createElement('p');
@@ -57,6 +65,7 @@
       this.sheetNameInputElem = document.createElement('input');
       this.sheetNameInputElem.setAttribute('name', this.id + '_sheet_name');
       this.sheetNameInputElem.setAttribute('type', 'text');
+      this.sheetNameInputElem.setAttribute('placeholder', 'Enter the sheet name');
       this.fileUploadElem = document.createElement('input');
       this.fileUploadElem.setAttribute('name', this.id);
       this.fileUploadElem.setAttribute('type', 'file');
@@ -68,8 +77,8 @@
     handleFileUpload(e) {
       const file = e.target.files[0];
       this.fileNameElem.innerText = 'Name: ' + file.name;
-      this.fileSizeElem.innerText = 'Size: ' + file.size;
-      this.fileUpdateAtElem.innerText = 'Last Update At: ' + file.lastModified.toString();
+      this.fileSizeElem.innerText = 'Size: ' + humanReadableSize(file.size);
+      this.fileUpdateAtElem.innerText = 'Last Update At: ' + new Date(file.lastModified).toLocaleDateString();
     }
 
     appendTo(e) {
