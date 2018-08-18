@@ -8,8 +8,7 @@ flask = "*"
 xlwt = "*"
 
 [dev-packages]
-wheel = "*"
-gunicorn = "*"
+waitress = "*"
 
 [requires]
 python_version = "3.6"

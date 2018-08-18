@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "210e2d473f397ffc480d0062f49eea7aa7c45b1dc58099fca6a54ef4cd4ee8ae"
+            "sha256": "d4df8bee50fbf669c14333a7d48d42c2c0994b263d0ab4d8f564cb06c19bb50b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -10,7 +10,7 @@
         "sources": [
             {
                 "name": "pypi",
-                "url": "https://pypi.org/simple",
+                "url": "https://pypi.douban.com/simple",
                 "verify_ssl": true
             }
         ]
@@ -67,21 +67,13 @@
         }
     },
     "develop": {
-        "gunicorn": {
+        "waitress": {
             "hashes": [
-                "sha256:aa8e0b40b4157b36a5df5e599f45c9c76d6af43845ba3b3b0efe2c70473c2471",
-                "sha256:fa2662097c66f920f53f70621c6c58ca4a3c4d3434205e608e121b5b3b71f4f3"
+                "sha256:40b0f297a7f3af61fbfbdc67e59090c70dc150a1601c39ecc9f5f1d283fb931b",
+                "sha256:d33cd3d62426c0f1b3cd84ee3d65779c7003aae3fc060dee60524d10a57f05a9"
             ],
             "index": "pypi",
-            "version": "==19.9.0"
-        },
-        "wheel": {
-            "hashes": [
-                "sha256:0a2e54558a0628f2145d2fc822137e322412115173e8a2ddbe1c9024338ae83c",
-                "sha256:80044e51ec5bbf6c894ba0bc48d26a8c20a9ba629f4ca19ea26ecfcf87685f5f"
-            ],
-            "index": "pypi",
-            "version": "==0.31.1"
+            "version": "==1.1.0"
         }
     }
 }

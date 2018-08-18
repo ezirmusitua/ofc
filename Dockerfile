@@ -1,7 +1,7 @@
-FROM python:3.6.6-alpine3.6
+FROM python:3.6.6
 COPY . /src
 WORKDIR /src
 RUN pip install -i https://pypi.douban.com/simple -r requirements.txt && \
 export FLASK_APP=csv2excel && \
 export FLASK_ENV="production"
-CMD ['gnuicorn', '-w', '2', '-b', '0.0.0.0:4000', '-k', 'gevent', '-n', 'ocf', 'csv2excel:create_app']
+CMD ["waitress", "--listen", "0.0.0.0:4000", "--url-scheme", "https", "--call", "csv2excel:create_app"]
