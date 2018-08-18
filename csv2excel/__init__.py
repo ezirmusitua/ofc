@@ -21,7 +21,7 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    app.add_url_rule('/', 'index', views.index)
-    app.add_url_rule('/', 'download', views.handle_and_download, methods=('POST',))
+    app.add_url_rule('/online-file-converter', 'index', views.index)
+    app.add_url_rule('/online-file-converter', 'download', views.handle_and_download, methods=('POST',))
     app.add_url_rule('/ping', 'ping', views.hello)
     return app
